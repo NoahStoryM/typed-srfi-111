@@ -10,5 +10,5 @@
 
 (require/typed/provide racket/base
   [box (∀ (t) (→ t (Mutable-Box t t)))]
-  [unbox (∀ (r) (→ (Mutable-Box Nothing r) r))]
-  [set-box! (∀ (w) (→ (Mutable-Box w Any) w Void))])
+  [unbox (∀ (+t) (→ (Mutable-Box Nothing +t) +t))]
+  [set-box! (∀ (-t) (→ (Mutable-Box -t Any) -t Void))])
